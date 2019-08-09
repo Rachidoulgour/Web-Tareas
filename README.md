@@ -1,5 +1,9 @@
 # Trelello: Página web de tareas.
 ## Página hecha con Javascript y manejo de DOM.
+Puedes crear tareas, y subtareas.
+Se puede ver la fecha y hora en la que se ha creado la tarea.
+Al hacer click sobre el boton de Hecho la tarea en el apartado Pendientes pasa al apartado Hechas.
+Se pueden eliminar las tareas y subtareas, pero una vez pasadas  a "HECHAS" se tiene que confirmar si deseas eleminarla.
 
 
 ![Captura de pantalla (25)](https://user-images.githubusercontent.com/50575842/62790147-c606b800-baca-11e9-8940-b67475afccde.png)
