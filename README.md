@@ -3,7 +3,7 @@
 Puedes crear tareas, y subtareas.
 Se puede ver la fecha y hora en la que se ha creado la tarea.
 Al hacer click sobre el boton de Hecho la tarea en el apartado Pendientes pasa al apartado Hechas.
-Se pueden eliminar las tareas y subtareas, pero una vez pasadas  a "HECHAS" se tiene que confirmar si deseas eleminarla.
+Se pueden eliminar las tareas y subtareas, pero se tiene que confirmar si deseas eleminarla.
 
 
 ![Captura de pantalla (46)](https://user-images.githubusercontent.com/50575842/62793517-0d447700-bad2-11e9-8b5a-042d0ba2b4b1.png)
