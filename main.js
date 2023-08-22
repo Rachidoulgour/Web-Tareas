@@ -1,10 +1,4 @@
 document.addEventListener('DOMContentLoaded',()=>{
-    document.querySelector('.colorPicker')
-    .addEventListener('change', event => {
-        document.querySelector('main').style.backgroundColor  =event.target.value;
-        document.querySelector('h2').style.color  =event.target.value;
-        document.querySelector('.done h2').style.color  =event.target.value;
-    })
     
     document.querySelector('.inputTareas')
     .addEventListener('keyup', event => {
@@ -13,15 +7,15 @@ document.addEventListener('DOMContentLoaded',()=>{
             let Task = document.createElement('div');
             Task.className='mensaje';
             Task.innerText = event.target.value; //asignar el texto
-            //document.querySelector('.tareas').appendChild(Task) //añadir tarea
-            event.target.value="" //limpiamos rl input
+            event.target.value="" //limpiamos el input
 
             let completeButton = document.createElement('button');
             completeButton.innerText= '✔️';
             completeButton.className="terminadobtn"
             completeButton.addEventListener('click', event => {
                 event.target.parentNode.classList.toggle('completed');
-            })
+            });
+
             let removeButton = document.createElement('button');
             removeButton.innerText= '❌';
             removeButton.className="completedBtn";
@@ -30,10 +24,9 @@ document.addEventListener('DOMContentLoaded',()=>{
                         if (opcion===true){
                             event.target.parentNode.remove('Borrado');
                         }
-            })
+            });
+
             let Done = document.createElement('button');
-            let Fecha =document.createElement('p')
-            let hoy = new Date();
             Done.innerText='Hecho';
             Done.addEventListener('click', event => {
                 document.querySelector('.done').appendChild(event.target.parentNode,)
@@ -46,9 +39,7 @@ document.addEventListener('DOMContentLoaded',()=>{
                 ${hoy.getHours()}:${hoy.getMinutes()}
                  `);
                  Done.parentNode.append(Fecha);
-            })
-            
-        
+            });
             
             let Datte = document.createElement('p')
             let today = new Date();
@@ -56,12 +47,6 @@ document.addEventListener('DOMContentLoaded',()=>{
             Datte.innerHTML= (`Creada el día  ${today.getDate()}/${today.getMonth()+1}/${today.getFullYear()} a las
              ${today.getHours()}:${today.getMinutes()}
             `);
-            // let Fecha =document.createElement('p')
-            // let hoy = new Date();
-            // Fecha.className="fechaDone";
-            // Fecha.innerHTML= (`Terminada el día ${hoy.getDate()}/${hoy.getMonth()+1}/${hoy.getFullYear()} a las
-            //  ${hoy.getHours()}:${hoy.getMinutes()}
-            //  `);
             Task.appendChild(Datte);
             
             
@@ -78,7 +63,8 @@ document.addEventListener('DOMContentLoaded',()=>{
                     completeButton.innerText= '✔️';
                     completeButton.addEventListener('click', event => {
                             event.target.parentNode.classList.toggle('completed');
-                    })
+                    });
+                    
                     let removeButton = document.createElement('button');
                     removeButton.innerText= '❌';
                     removeButton.className="completedBtn";
@@ -91,11 +77,11 @@ document.addEventListener('DOMContentLoaded',()=>{
                     
 
                             
-                    })
+                    });
                     coment.appendChild(completeButton);
                     coment.appendChild(removeButton);
                 }
-            })
+            });
             
             Task.appendChild(completeButton);
             Task.appendChild(removeButton);
